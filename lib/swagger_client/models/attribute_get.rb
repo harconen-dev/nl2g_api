@@ -95,7 +95,7 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.to_s.length < 
+      return false if @name.to_s.length < 1
       return true
     end
 
@@ -106,7 +106,7 @@ module SwaggerClient
         fail ArgumentError, "name cannot be nil"
       end
 
-      if name.to_s.length < 
+      if name.to_s.length < 1
         fail ArgumentError, "invalid value for 'name', the character length must be great than or equal to ."
       end
 
