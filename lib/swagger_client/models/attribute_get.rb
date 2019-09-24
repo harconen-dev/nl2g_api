@@ -95,8 +95,7 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.to_s.length < 1
-      return true
+      @name && @name.to_s.length < 1 ? false : true
     end
 
     # Custom attribute writer method with validation
