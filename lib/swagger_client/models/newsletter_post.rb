@@ -219,8 +219,8 @@ module SwaggerClient
     def valid?
       type_validator = EnumAttributeValidator.new('String', ["default", "ab", "trigger", "transaction"])
       return false unless type_validator.valid?(@type)
-      return false if @name.to_s.length < 
-      return false if @description.to_s.length < 
+      return false if @name.to_s.length < 1
+      return false if @description.to_s.length < 1
       return true
     end
 
@@ -241,7 +241,7 @@ module SwaggerClient
         fail ArgumentError, "name cannot be nil"
       end
 
-      if name.to_s.length < 
+      if name.to_s.length < 1
         fail ArgumentError, "invalid value for 'name', the character length must be great than or equal to ."
       end
 
@@ -255,7 +255,7 @@ module SwaggerClient
         fail ArgumentError, "description cannot be nil"
       end
 
-      if description.to_s.length < 
+      if description.to_s.length < 1
         fail ArgumentError, "invalid value for 'description', the character length must be great than or equal to ."
       end
 

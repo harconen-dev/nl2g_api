@@ -176,13 +176,13 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.to_s.length < 
-      return false if @imprint.to_s.length < 
-      return false if @header_from_email.to_s.length < 
-      return false if @header_from_name.to_s.length < 
-      return false if @header_reply_email.to_s.length < 
-      return false if @header_reply_name.to_s.length < 
-      return false if @tracking_url.to_s.length < 
+      return false if @name.to_s.length < 1
+      return false if @imprint.to_s.length < 1
+      return false if @header_from_email.to_s.length < 1
+      return false if @header_from_name.to_s.length < 1
+      return false if @header_reply_email.to_s.length < 1
+      return false if @header_reply_name.to_s.length < 1
+      return false if @tracking_url.to_s.length < 1
       return true
     end
 
@@ -193,7 +193,7 @@ module SwaggerClient
         fail ArgumentError, "name cannot be nil"
       end
 
-      if name.to_s.length < 
+      if name.to_s.length < 1
         fail ArgumentError, "invalid value for 'name', the character length must be great than or equal to ."
       end
 
@@ -207,7 +207,7 @@ module SwaggerClient
         fail ArgumentError, "imprint cannot be nil"
       end
 
-      if imprint.to_s.length < 
+      if imprint.to_s.length < 1
         fail ArgumentError, "invalid value for 'imprint', the character length must be great than or equal to ."
       end
 
@@ -221,7 +221,7 @@ module SwaggerClient
         fail ArgumentError, "header_from_email cannot be nil"
       end
 
-      if header_from_email.to_s.length < 
+      if header_from_email.to_s.length < 1
         fail ArgumentError, "invalid value for 'header_from_email', the character length must be great than or equal to ."
       end
 
@@ -235,7 +235,7 @@ module SwaggerClient
         fail ArgumentError, "header_from_name cannot be nil"
       end
 
-      if header_from_name.to_s.length < 
+      if header_from_name.to_s.length < 1
         fail ArgumentError, "invalid value for 'header_from_name', the character length must be great than or equal to ."
       end
 
@@ -249,7 +249,7 @@ module SwaggerClient
         fail ArgumentError, "header_reply_email cannot be nil"
       end
 
-      if header_reply_email.to_s.length < 
+      if header_reply_email.to_s.length < 1
         fail ArgumentError, "invalid value for 'header_reply_email', the character length must be great than or equal to ."
       end
 
@@ -263,7 +263,7 @@ module SwaggerClient
         fail ArgumentError, "header_reply_name cannot be nil"
       end
 
-      if header_reply_name.to_s.length < 
+      if header_reply_name.to_s.length < 1
         fail ArgumentError, "invalid value for 'header_reply_name', the character length must be great than or equal to ."
       end
 
@@ -277,7 +277,7 @@ module SwaggerClient
         fail ArgumentError, "tracking_url cannot be nil"
       end
 
-      if tracking_url.to_s.length < 
+      if tracking_url.to_s.length < 1
         fail ArgumentError, "invalid value for 'tracking_url', the character length must be great than or equal to ."
       end
 

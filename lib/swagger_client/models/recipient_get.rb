@@ -341,12 +341,12 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @email.to_s.length < 
-      return false if @phone.to_s.length < 
+      return false if @email.to_s.length < 1
+      return false if @phone.to_s.length < 1
       gender_validator = EnumAttributeValidator.new('String', ["m", "f"])
       return false unless gender_validator.valid?(@gender)
-      return false if @first_name.to_s.length < 
-      return false if @last_name.to_s.length < 
+      return false if @first_name.to_s.length < 1
+      return false if @last_name.to_s.length < 1
       statistic_last_useragent_device_validator = EnumAttributeValidator.new('String', ["desktop", "mobile", "tablet"])
       return false unless statistic_last_useragent_device_validator.valid?(@statistic_last_useragent_device)
       statistic_last_useragent_family_validator = EnumAttributeValidator.new('String', ["lotus_notes", "apple_mail", "thunderbird", "windows_live_mail", "outlook", "iOS", "Android", "Windows", "else"])
@@ -361,7 +361,7 @@ module SwaggerClient
         fail ArgumentError, "email cannot be nil"
       end
 
-      if email.to_s.length < 
+      if email.to_s.length < 1
         fail ArgumentError, "invalid value for 'email', the character length must be great than or equal to ."
       end
 
@@ -375,7 +375,7 @@ module SwaggerClient
         fail ArgumentError, "phone cannot be nil"
       end
 
-      if phone.to_s.length < 
+      if phone.to_s.length < 1
         fail ArgumentError, "invalid value for 'phone', the character length must be great than or equal to ."
       end
 
@@ -399,7 +399,7 @@ module SwaggerClient
         fail ArgumentError, "first_name cannot be nil"
       end
 
-      if first_name.to_s.length < 
+      if first_name.to_s.length < 1
         fail ArgumentError, "invalid value for 'first_name', the character length must be great than or equal to ."
       end
 
@@ -413,7 +413,7 @@ module SwaggerClient
         fail ArgumentError, "last_name cannot be nil"
       end
 
-      if last_name.to_s.length < 
+      if last_name.to_s.length < 1
         fail ArgumentError, "invalid value for 'last_name', the character length must be great than or equal to ."
       end
 
