@@ -107,7 +107,7 @@ module SwaggerClient
         fail ArgumentError, "name cannot be nil"
       end
 
-      if name.to_s.length < 
+      if name.to_s.length < 1
         fail ArgumentError, "invalid value for 'name', the character length must be great than or equal to ."
       end
 
